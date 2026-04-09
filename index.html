@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>TraxionRouteMind - Agente IA</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+/* CHAT */
+.chat {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* MENSAJES */
+.mensaje {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.ia {
+  background: #334155;
+  text-align: left;
+}
+
+.usuario {
+  background: #22c55e;
+  text-align: right;
+  color: black;
+}
+
+/* FORMULARIO */
+.formulario {
+  margin-top: 20px;
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+/* BOTONES */
+a.boton {
+  display: block;
+  background: #22c55e;
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+a.boton:hover {
+  background: #16a34a;
+}
+
+/* RESULTADOS */
+.resultado {
+  display: none;
+  margin-top: 20px;
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.resultado:target {
+  display: block;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 TraxionRouteMind</h1>
+
+<!-- CHAT SIMULADO -->
+<div class="chat">
+
+<div class="mensaje ia">
+Hola 👋 soy TraxionRouteMind, tu asistente para planear rutas.<br><br>
+Voy a ayudarte paso a paso con una estimación sencilla.
+</div>
+
+<div class="mensaje ia">
+Dime:<br>
+- Origen<br>
+- Destino<br>
+- Tipo de vehículo<br>
+- Rendimiento<br>
+- Precio de gasolina
+</div>
+
+</div>
+
+<!-- FORMULARIO -->
+<div class="formulario">
+
+<label>Origen:</label>
+<input type="text" placeholder="Ej: CDMX">
+
+<label>Destino:</label>
+<input type="text" placeholder="Ej: Puebla">
+
+<label>Vehículo:</label>
+<select>
+  <option>Van</option>
+  <option>Autobús</option>
+  <option>Camión</option>
+</select>
+
+<label>Tipo de ruta:</label>
+<select>
+  <option>Corta</option>
+  <option>Media</option>
+  <option>Larga</option>
+</select>
+
+<p>Selecciona una simulación:</p>
+
+<a href="#r1" class="boton">Ruta corta</a>
+<a href="#r2" class="boton">Ruta media</a>
+<a href="#r3" class="boton">Ruta larga</a>
+
+</div>
+
+<!-- RESULTADOS -->
+
+<div id="r1" class="resultado">
+  <div class="mensaje usuario">Quiero una ruta corta</div>
+  <div class="mensaje ia">
+    📍 Distancia: 120 km<br>
+    ⛽ Consumo: 15 L<br>
+    🛑 Paradas: 0<br>
+    💰 Gasolina: $360<br>
+    🚧 Casetas: 1<br>
+    💵 Total: $460
+  </div>
+</div>
+
+<div id="r2" class="resultado">
+  <div class="mensaje usuario">Quiero una ruta media</div>
+  <div class="mensaje ia">
+    📍 Distancia: 320 km<br>
+    ⛽ Consumo: 40 L<br>
+    🛑 Paradas: 1<br>
+    💰 Gasolina: $960<br>
+    🚧 Casetas: 3<br>
+    💵 Total: $1260
+  </div>
+</div>
+
+<div id="r3" class="resultado">
+  <div class="mensaje usuario">Quiero una ruta larga</div>
+  <div class="mensaje ia">
+    📍 Distancia: 550 km<br>
+    ⛽ Consumo: 70 L<br>
+    🛑 Paradas: 2<br>
+    💰 Gasolina: $1680<br>
+    🚧 Casetas: 5<br>
+    💵 Total: $2180
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
